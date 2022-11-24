@@ -110,4 +110,4 @@ function heuristic(pos,pos1){
     return d1 + d2;
 }
 
-//console.log(result)
+console.log(result)
