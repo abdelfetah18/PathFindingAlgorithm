@@ -1,0 +1,145 @@
+<html>
+    <head>
+        <title>path finding algorythm</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            body {
+                background-color: lightblue;
+                width: 100vw;
+                height: 100vh;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .canvas_wrapper {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 70%;
+            }
+
+            #mycanvas {
+                background-color: #fff;
+                margin: 20px;
+            }
+            
+            .container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+            }
+
+            .data_details {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                width: 40%;
+            }
+
+            .actions_wrapper {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 50%;
+            }
+
+            .btn {
+                background-color: rebeccapurple;
+                font-weight: 500;
+                color: #fff;
+                padding-left: 10px;
+                padding-right: 10px;
+                padding-top: 5px;
+                padding-bottom: 5px;
+                border-radius: 10px;
+                font-family: monospace;
+                cursor: pointer;
+                margin-top: 5px;
+            }
+
+            .info_wrapper{
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .header_wrapper {
+                width: 90%;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                align-items: center;
+            }
+
+            .title {
+                font-weight: 600;
+                font-family: monospace;
+                font-size: 1.2rem;
+            }
+
+            .body_wrapper {
+                width: 90%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .key_value_wrapper {
+                width: 90%;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                align-items: center;
+                margin-top: 10px;
+            }
+
+            .key {
+                font-weight: 700;
+                font-family: monospace;
+                font-size: 1rem;
+            }
+
+            .value {
+                font-weight: 700;
+                font-family: monospace;
+                font-size: 1rem;
+                color: green;
+                margin: 0 5px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="canvas_wrapper">
+                <canvas id="mycanvas" width="420px" height="420px"></canvas>
+            </div>
+            <div class="data_details">
+                <div class="info_wrapper">
+                    <div class="header_wrapper">
+                        <div class="title">Algorythm info:</div>                
+                    </div>
+                    <div class="body_wrapper">
+                        <div class="key_value_wrapper">
+                            <div class="key">state:</div>
+                            <div id="state" class="value">start</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="actions_wrapper">
+                    <div onclick="changeState()" class="btn">change state</div>
+                    <div onclick="search()" class="btn">Search</div>
+                    <div onclick="clearData()" class="btn">Clear</div>
+                </div>
+            </div>
+        </div>
+        <script src="./main.js"></script>
+    </body>
+</html>
